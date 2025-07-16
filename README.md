@@ -44,15 +44,17 @@ k get ...
 ```
 
 run:
+```
 kubectl run --image nginx --port 80 --name webserver
-
+```
 delete:
+```
 kubetl delete ...
   pods
   services
   deployments
   ....
-  
+```
 
 expose:
 ```
