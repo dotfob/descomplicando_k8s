@@ -31,25 +31,46 @@ echo "alias k='kubectl'" >> ~/.zshrc
 echo "source ~/.kube/completion.zsh.inc" >> ~/.zshrc
 source ~/.zshrc
 ```
-## Comandos básicos
+## Exemplos de Comandos básicos
 get:
 ```
 k get ...
   clusters
   nodes
   pods
+  services
   deployments
   ...
 ```
 
 run:
+kubectl run --image nginx --port 80 --name webserver
 
-
+delete:
+kubetl delete ...
+  pods
+  services
+  deployments
+  ....
+  
 
 expose:
+```
+kubectl expose pods webserver --type NodePort
+kubectl expose deployment hello-node --type=LoadBalancer --port=8080
+```
 
+exec: 
+```
+ kubectl exec -ti webserver -- bash
+ kubectl exec -ti webserver -- curl http://localhost:8080 
+```
 
-
+dry-run: (gerar arquivo yalm)
+```
+kubectl run --image nginx --port 80 webserver --dry-run=client -o yaml > nginx.yaml
+kubectl apply -f nginx.yaml
+```
 ## Fontes
 https://kind.sigs.k8s.io/docs/user/quick-start/
 https://kubernetes.io/pt-br/docs/tasks/tools/install-kubectl-linux/
