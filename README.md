@@ -17,3 +17,13 @@ Comando para aplicar:
   kind create cluster --config config.yaml --name foblab
 ```
   
+## Configurações básicas para melhor usabilidade:
+
+```
+kind completion zsh > ~/.kube/completion.zsh.inc
+echo "alias k='kubectl'" >> ~/.zshrc
+echo "source ~/.kube/completion.zsh.inc" >> ~/.zshrc
+source ~/.zshrc
+```
+
+
