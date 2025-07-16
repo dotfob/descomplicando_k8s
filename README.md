@@ -37,4 +37,4 @@ source ~/.zshrc
 
 ## Fontes
 https://kind.sigs.k8s.io/docs/user/quick-start/
-
+https://kubernetes.io/pt-br/docs/tasks/tools/install-kubectl-linux/
