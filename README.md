@@ -16,7 +16,13 @@ Comando para aplicar:
 ```
   kind create cluster --config config.yaml --name foblab
 ```
-  
+## Instalação do kubectl para linux 
+```
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x kubectl
+mv kubectl /usr/local/bin/
+```
+
 ## Configurações básicas para melhor usabilidade:
 
 ```
@@ -25,5 +31,10 @@ echo "alias k='kubectl'" >> ~/.zshrc
 echo "source ~/.kube/completion.zsh.inc" >> ~/.zshrc
 source ~/.zshrc
 ```
+## Comandos básicos
 
+
+
+## Fontes
+https://kind.sigs.k8s.io/docs/user/quick-start/
 
