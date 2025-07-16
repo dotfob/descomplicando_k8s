@@ -32,6 +32,21 @@ echo "source ~/.kube/completion.zsh.inc" >> ~/.zshrc
 source ~/.zshrc
 ```
 ## Comandos básicos
+get:
+```
+k get ...
+  clusters
+  nodes
+  pods
+  deployments
+  ...
+```
+
+run:
+
+
+
+expose:
 
 
 
